@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AegisCloud - Enterprise Infrastructure Command Center</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-unit">
+        <div class="brand-identity">
+            <div class="logo-icon"></div>
+            <div class="brand-text">
+                <h1>AegisCloud Networks</h1>
+                <span class="sub-text">Core Node: Automated Operations Management</span>
+            </div>
+        </div>
+        <div class="global-actions">
+            <span class="system-time" id="liveClock">00:00:00 UTC</span>
+            <button id="themeToggleBtn" class="js-toggle-btn" aria-label="Toggle Environment Theme">
+                Toggle Dark Mode
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav-container">
+        <ul>
+            <li><button class="nav-link active" data-page="dashboard">Live Infrastructure Dashboard</button></li>
+            <li><button class="nav-link" data-page="traffic">Traffic & Load Scaler</button></li>
+            <li><button class="nav-link" data-page="firewall">SecOps Firewall Stream</button></li>
+        </ul>
+    </nav>
+
+    <main class="main-layout">
+        
+        <section id="page-dashboard" class="page-view active">
+            <div class="content-column">
+                <div class="content-block hero-card">
+                    <h2>Virtual Node Infrastructure Status</h2>
+                    <p>Monitoring cloud cluster state updates across distributed volatile memory nodes. Adjust local server profiles below.</p>
+                    
+                    <div class="overview-grid">
+                        <div class="data-card">
+                            <div class="card-meta">
+                                <h3>Global Router Status</h3>
+                                <p>Primary Gateway</p>
+                            </div>
+                            <span id="systemStatusBadge" class="badge badge-success">Operational</span>
+                        </div>
+                        <div class="data-card">
+                            <div class="card-meta">
+                                <h3>Active Containers</h3>
+                                <p>Docker Pods</p>
+                            </div>
+                            <span class="badge badge-neutral" id="podCounterLabel">12 Active Pods</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block">
+                    <h2>Emergency Access Control Panel</h2>
+                    <p>Trigger safety protocols to isolate the node in case of an ongoing network breach simulation.</p>
+                    <div class="control-wrapper">
+                        <label class="switch-container">
+                            <input type="checkbox" id="statusToggleCheckbox">
+                            <span class="slider"></span>
+                            <span class="label-text">Isolate Network Core (Simulate Emergency)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-traffic" class="page-view">
+            <div class="content-column">
+                <div class="content-block">
+                    <h2>Traffic Load Engine & Microservices Scaler</h2>
+                    <p>Manually scale bandwidth allocations or throttle client application requests to observe dynamic client-side memory optimizations.</p>
+                    
+                    <div class="counter-interface">
+                        <span class="interface-label">Live Traffic Load Index</span>
+                        <span id="counterValue" class="display-number">0</span>
+                        <p id="loadMessage" class="load-status-text">System is running in idle state.</p>
+                        
+                        <div class="button-group">
+                            <button id="decreaseBtn" class="btn btn-secondary">- Throttle Down</button>
+                            <button id="resetBtn" class="btn btn-outline">Reset to Baseline</button>
+                            <button id="increaseBtn" class="btn btn-primary">+ Scale Up Traffic</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-firewall" class="page-view">
+            <div class="content-column">
+                <div class="content-block">
+                    <h2>SecOps Telemetry Event Log Stream</h2>
+                    <p>Real-time logging of server cluster mutations, DOM updates, and client sensory actions captured via JavaScript handlers.</p>
+                    
+                    <div class="feed-controls">
+                        <button id="logEventBtn" class="btn btn-accent js-submit">Inject Telemetry Attack Packet</button>
+                        <button id="clearLogBtn" class="btn btn-text">Purge Volatile Stream Buffer</button>
+                    </div>
+
+                    <ul id="activityLog" class="activity-log-list">
+                        <li class="empty-state">System event stream is empty. Interact with controls to broadcast telemetry data.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <aside class="sidebar-module">
+            <h2>Hardware Allocation Matrix</h2>
+            <p class="sidebar-desc">Live resource tracking profile of client-side architecture.</p>
+            
+            <div class="health-indicator-group">
+                <div class="health-item">
+                    <div class="health-label">
+                        <span>DOM Tree Integrity</span>
+                        <strong class="text-success">100%</strong>
+                    </div>
+                    <div class="progress-bar"><div class="fill" style="width: 100%;"></div></div>
+                </div>
+                
+                <div class="health-item">
+                    <div class="health-label">
+                        <span>Volatile Heap Allocation</span>
+                        <strong id="memoryPercentageLabel">25%</strong>
+                    </div>
+                    <div class="progress-bar"><div class="fill alert-fill" id="memoryBar" style="width: 25%;"></div></div>
+                </div>
+
+                <div class="health-item">
+                    <div class="health-label">
+                        <span>CPU Thread Load</span>
+                        <strong id="cpuLoadLabel">Optimal</strong>
+                    </div>
+                    <div class="progress-bar"><div class="fill sync-fill" id="cpuBar" style="width: 12%;"></div></div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer-info">
+                <p>Node Location: AWS-eu-central-1</p>
+                <p>Framework Status: Vanilla Native</p>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="footer-section">
+        <p>&copy; 2026 AegisCloud Networks | Senior Project Portfolio | Designed to Industrial Training Standards</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
